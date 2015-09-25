@@ -19,9 +19,11 @@
             <ColumnDefinition Width=".5*" />
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Restaurant Manager" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="48" FontWeight="Bold" />
-        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Internal Test Version" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="28" />
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="**Go to Orders View**" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" />
-        <TextBlock Grid.Row="2" Grid.Column="1" Text="**Submit Order**" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" />
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Restaurant Manager" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" />
+        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Internal Test Version" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="28"/>
+        <!--<TextBlock Grid.Row="2" Grid.Column="0" Text="**Go to Orders View**" HorizontalAlignment="Center" VerticalAlignment="Center" />-->
+        <!--<TextBlock Grid.Row="2" Grid.Column="1" Text="**Submit Order**" HorizontalAlignment="Center" VerticalAlignment="Center" /> -->
+        <Button x:Name="buttonOrdersView" Grid.Row="2" Grid.Column="0" Content="Go to Orders View" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonOrdersView_Click"/>
+        <Button x:Name="buttonSubmitOrder" Grid.Row="2" Grid.Column="1" Content="Submit Order" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonSubmitOrder_Click" />
     </Grid>
 </Page>
