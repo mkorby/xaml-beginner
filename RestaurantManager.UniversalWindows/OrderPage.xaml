@@ -7,6 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.TopAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Label="Home" Icon="Home" Click="HomeButton_Click"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.TopAppBar>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height=".2*" />
@@ -15,21 +23,20 @@
             <RowDefinition Height=".1*" />
             <RowDefinition Height=".1*" />
         </Grid.RowDefinitions>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width=".5*" />
             <ColumnDefinition Width=".25*" />
             <ColumnDefinition Width=".25*" />
         </Grid.ColumnDefinitions>
 
-        <!--<TextBlock Grid.Row="2" Grid.Column="0" Text="Row2-Column0" />
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="row1-Column0" />
-        <TextBlock Grid.Row="0" Grid.Column="2" Text="row0-column2" />
-        <TextBlock Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Text="Row0and1-Column1" />-->
-
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="Special Requests:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="38" />
-        <TextBlock Grid.Row="1" Grid.Column="2" Text="Order Items:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="38" />
-        <TextBlock Grid.Row="4" Grid.Column="0" Text="**Add to Order**" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="38" />
-        <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="**Submit Order**" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="38" />
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Special Requests:" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="Order Items:" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <!--<TextBlock Grid.Row="4" Grid.Column="0" Text="**Add to Order**" HorizontalAlignment="Center" VerticalAlignment="Center" /> -->
+        <!--<TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="**Submit Order**" HorizontalAlignment="Center" VerticalAlignment="Center" /> -->
+        <Button x:Name="buttonAddToOrder" Grid.Row="4" Grid.Column="0" Content="Add to Order" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="buttonSubmitOrder" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Content="Submit Order" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ListView x:Name="listView" Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" />
+        <ListView x:Name="listView1" Grid.Row="2" Grid.RowSpan="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" />
     </Grid>
 </Page>
