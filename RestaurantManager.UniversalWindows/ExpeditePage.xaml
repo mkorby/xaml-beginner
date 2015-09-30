@@ -5,16 +5,27 @@
     xmlns:local="using:RestaurantManager.UniversalWindows"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-    
-    <Page.TopAppBar>
+    mc:Ignorable="d">     
+    <!--xmlns:models="using:RestaurantManager.Models"-->     
+  
+    <!--<Page.TopAppBar>
         <CommandBar>
             <CommandBar.PrimaryCommands>
                 <AppBarButton Label="Home" Icon="Home" Click="HomeButton_Click"/>
             </CommandBar.PrimaryCommands>
         </CommandBar>
-    </Page.TopAppBar>
+    </Page.TopAppBar>-->
 
+    <!--<Page.DataContext>
+        <models:DataManager />
+    </Page.DataContext>-->
+
+    <Page.TopAppBar>
+        <AppBar IsOpen="True">
+            <AppBarButton Icon="Home" Label="Home" Click="HomeButton_Click"/>
+        </AppBar>
+    </Page.TopAppBar>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height=".9*" />
@@ -27,7 +38,8 @@
 
         <!--<TextBlock Grid.Row="1" Grid.Column="0" Text="**Clear All Orders**" HorizontalAlignment="Center" VerticalAlignment="Center" /> -->
         <Button x:Name="buttonClearOrders" Grid.Row="1" Grid.Column="0" Content="Clear All Orders" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <GridView x:Name="gridView" Margin="10"/>
 
+        <!--<GridView x:Name="gridView" ItemsSource="{Binding OrderItems}" Grid.Row="0" Margin="0,35,0,0" />-->
+        <GridView x:Name="gridView" ItemsSource="{Binding Source={StaticResource DataManager}, Path=OrderItems}" Grid.Row="0" Margin="10,35,0,0"/>
     </Grid>
 </Page>
