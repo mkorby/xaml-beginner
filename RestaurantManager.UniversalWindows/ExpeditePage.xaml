@@ -39,7 +39,7 @@
         <!--<TextBlock Grid.Row="1" Grid.Column="0" Text="**Clear All Orders**" HorizontalAlignment="Center" VerticalAlignment="Center" /> -->
         <Button x:Name="buttonClearOrders" Grid.Row="1" Grid.Column="0" Content="Clear All Orders" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-        <!--<GridView x:Name="gridView" ItemsSource="{Binding OrderItems}" Grid.Row="0" Margin="0,35,0,0" />-->
-        <GridView x:Name="gridView" ItemsSource="{Binding Source={StaticResource DataManager}, Path=OrderItems}" Grid.Row="0" Margin="10,35,0,0"/>
+        <!--<GridView x:Name="gridView" ItemsSource="{Binding OrderItems}" Grid.Row="0" Margin="0,35,10,0" />-->
+        <GridView x:Name="gridView" ItemsSource="{Binding Source={StaticResource DataManager}, Path=OrderItems}" Grid.Row="0" Margin="10,35,10,0"/>
     </Grid>
 </Page>
