@@ -6,8 +6,6 @@
     xmlns:models="using:RestaurantManager.Models"
     RequestedTheme="Dark">
     <Application.Resources>
-        <models:DataManager x:Key="DataManager"/>
-        
         <Style TargetType="Button">
             <Setter Property="FontSize" Value="32" />
         </Style>

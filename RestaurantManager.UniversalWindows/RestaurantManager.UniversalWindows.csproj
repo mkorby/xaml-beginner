@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{B9399AF9-35F3-4817-BE6C-902E5AAEB9A1}</ProjectGuid>
+    <ProjectGuid>{15039095-DCCC-4AED-8757-C2DB14B96088}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RestaurantManager.UniversalWindows</RootNamespace>
@@ -111,12 +111,11 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="RestaurantManager.UniversalWindows_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\LargeSquareLogo.png" />
     <Content Include="Assets\SmallSquareLogo.png" />
-    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
@@ -126,21 +125,21 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="ExpeditePage.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="OrderPage.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RestaurantManager.Models\RestaurantManager.Models.csproj">
-      <Project>{b8b61e53-44b6-4a2f-97e7-d479680e67de}</Project>
+      <Project>{7ea2b405-e454-4f0c-a8c3-d6bf3f814f5c}</Project>
       <Name>RestaurantManager.Models</Name>
     </ProjectReference>
   </ItemGroup>

@@ -3,43 +3,30 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:RestaurantManager.UniversalWindows"
+    xmlns:models="using:RestaurantManager.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">     
-    <!--xmlns:models="using:RestaurantManager.Models"-->     
-  
-    <!--<Page.TopAppBar>
-        <CommandBar>
-            <CommandBar.PrimaryCommands>
-                <AppBarButton Label="Home" Icon="Home" Click="HomeButton_Click"/>
-            </CommandBar.PrimaryCommands>
-        </CommandBar>
-    </Page.TopAppBar>-->
-
-    <!--<Page.DataContext>
-        <models:DataManager />
-    </Page.DataContext>-->
-
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <models:ExpediteDataManager />
+    </Page.DataContext>
     <Page.TopAppBar>
-        <AppBar IsOpen="True">
-            <AppBarButton Icon="Home" Label="Home" Click="HomeButton_Click"/>
+        <AppBar>
+            <AppBarButton Label="Home" Click="MainPage_Click">
+                <AppBarButton.Icon>
+                    <SymbolIcon Symbol="Home" />
+                </AppBarButton.Icon>
+            </AppBarButton>
         </AppBar>
     </Page.TopAppBar>
-    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height=".9*" />
-            <RowDefinition Height=".1*" />
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.85*"/>
+            <RowDefinition Height="0.10*"/>
         </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-        </Grid.ColumnDefinitions>
-
-        <!--<TextBlock Grid.Row="1" Grid.Column="0" Text="**Clear All Orders**" HorizontalAlignment="Center" VerticalAlignment="Center" /> -->
-        <Button x:Name="buttonClearOrders" Grid.Row="1" Grid.Column="0" Content="Clear All Orders" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-        <!--<GridView x:Name="gridView" ItemsSource="{Binding OrderItems}" Grid.Row="0" Margin="0,35,10,0" />-->
-        <GridView x:Name="gridView" ItemsSource="{Binding Source={StaticResource DataManager}, Path=OrderItems}" Grid.Row="0" Margin="10,35,10,0"/>
+        <GridView Grid.Row="1" ItemsSource="{Binding OrderItems}">
+        </GridView>
+        <Button Content="Clear All Orders" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" />
     </Grid>
 </Page>
