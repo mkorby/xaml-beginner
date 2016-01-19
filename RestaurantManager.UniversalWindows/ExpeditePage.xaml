@@ -26,6 +26,44 @@
             <RowDefinition Height="0.10*"/>
         </Grid.RowDefinitions>
         <GridView Grid.Row="1" ItemsSource="{Binding OrderItems}">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Grid Background="#FF414141" Height="180" Margin="20,10,10,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0">
+                                <!--<ListView ItemsSource="{Binding Items}" DisplayMemberPath="Title">-->
+                                <ListView ItemsSource="{Binding Items}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Title}" FontSize="24"/>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </StackPanel>
+                        </Grid>
+                        <Grid Background="Gray" Height="170" Margin="20,0,10,10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0">
+                                <TextBlock Margin ="10">
+                                    <Run Text="{Binding Table.Description}" FontSize="28"/>
+                                </TextBlock>
+                                <TextBlock  Text="Special Notes" Margin="20,0,0,0" FontSize="14" FontStyle="Italic" FontWeight="Bold"/>
+                                <TextBlock Margin="20,0,0,20">
+                                    <Run Text="{Binding SpecialRequests}" FontSize="14" />
+                                </TextBlock>
+                                <Button Content="Delete" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
         </GridView>
         <Button Content="Clear All Orders" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" />
     </Grid>
